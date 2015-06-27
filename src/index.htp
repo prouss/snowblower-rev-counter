@@ -6,7 +6,7 @@
 				<h1>Snowblower Tachometer</h1>
 				<p>Welcome to the snowblower-rev-counter web site</p>
 				<p>In this project we want to design and build a tachometer (revolution counter) for a very old snowblower.</p>
-				<p>The goal of this project is not to build something useful, it is rather to let my 15 year old son acquire some knowledge in the following fields:</p>
+				<p>The goal of this project is not to build something useful, it is rather to let my 16 year old son acquire some knowledge in the following fields:</p>
 				<ul>
 					<li>Basic analog and digital electronic design</li>
 					<li>Arduino programming</li>
