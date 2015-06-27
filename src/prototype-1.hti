@@ -1,0 +1,75 @@
+<a name="FirstPrototype"><h2>05/30/2015: First Prototype</h2></a>
+<p>The idea for his first prototype was that we would have some sort of device that would generate a square pulse for each engine revolution.
+By measuring the time between two pulses (the <i>t</i> in figure 1 below) we could easily compute the number of revolutions per minutes (RPM).</p>
+<figure>
+	<img src="images/measuring-time-between pulses.png" alt="Prototype Working in Freezer">
+	<figcaption>Figure 1 - Measuring elapsed time between two pulses</figcaption>
+</figure>
+<p>Inspired by a robotic lab at high school where he had to measure the length of a pulse in order to evaluated the distance measured by a HC-SR04 sonar, Étienne wrote an Arduino
+sketch for measuring the time between two pulses, convert it to RPM, and display it on a LCD. The code for this sketch is shown in figure 2.
+<figure> 
+	<div class="code">
+<pre>#include <Arduino.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,16,2);
+
+void setup()
+{
+  lcd.init();
+  lcd.backlight();
+  pinMode(3,INPUT);
+}
+
+int RPM()
+{
+  unsigned long gap = pulseIn(3,LOW) + pulseIn(3,HIGH);
+  int rpm = 0;
+  if (gap != 0)
+  {
+    rpm = 60000000/gap;
+  }
+  return rpm;
+}
+
+void loop()
+{
+  int rpm = RPM();
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print(rpm);
+  delay(500);
+}</pre>
+	</div>
+	<figcaption>Figure 2 - Code for counting RPM</figcaption>
+</figure>
+<p>In order to test the RPM counting sketch, Étienne wrote a second sketch for generating pulses at specific frequencies.
+The code for this sketch is shown in figure 3.<p>
+<figure> 
+	<div class="code">
+<pre>void setup()
+{
+  pinMode(3,OUTPUT);
+}
+
+int rpm = 2000;
+unsigned long gap = 60000/rpm;
+  
+void loop()
+{
+  digitalWrite(3,LOW);
+  delay(gap);
+  digitalWrite(3,HIGH);
+  delay(1);
+}</pre>
+	</div>
+	<figcaption>Figure 3 - Code for generating pulses</figcaption>
+</figure>
+<p>The figure 4 shows two Arduinos running the two sketches. The Arduino connected to a PC with a USB cable is the pulse generator.
+The Arduino connected to the display is the one that measure the elapsed time between two pulses and convert that to RPM.<p>
+<figure> 
+	<img src="images/2015-06-06 10.49.03.jpg" alt="Prototype Working in Freezer">
+	<figcaption>Fugure 4 - Two Arduinos : the pulse generator and the RPM counter</figcaption>
+</figure>
+<p>Using the PC, Étienne ran the generator at different frequencies (by modifying the rpm variable in the sketch) and he notices that the displayed RPM was not exactly matching the frequency of the generator.
+This is due to the timing of some instructions that is not accounted for. We will fix that at a later time.<p>

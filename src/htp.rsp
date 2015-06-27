@@ -1,0 +1,10 @@
+ ; sample response file
+-SEMICONDENSE -IMGXY
+index.htp ../index.html
+case-design.htp ../case-design.html
+design.htp ../design.html
+power-supply.htp ../power-supply.html
+rotation-information.htp ../rotation-information.html
+rpm-counting.htp ../rpm-counting.html
+temperature-test.htp ../temperature-test.html
+wifi.htp ../wifi.html

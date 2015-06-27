@@ -1,0 +1,12 @@
+<BLOCK body>
+	<h1>Counting and displaying RPM</h1>
+	<p>This page contains the information on all activities related to counting and displaying the number of revolutions per minute.</p>
+	
+	<!---- 05/30/2015: First Prototype --->
+   	<hr>
+	<file include="prototype-1.hti">	
+	
+	<!---- 06/20/2015: Using a 3.3v Arduino --->
+	<hr>
+    <file include="prototype-2.hti">	
+</BLOCK>

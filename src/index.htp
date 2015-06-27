@@ -1,0 +1,39 @@
+<SET top_page>
+<BLOCK body>
+	<table>
+		<tr>
+			<td width="75%" style="vertical-align: top; border: 0px;">
+				<h1>Snowblower Tachometer</h1>
+				<p>Welcome to the snowblower-rev-counter web site</p>
+				<p>In this project we want to design and build a tachometer (revolution counter) for a very old snowblower.</p>
+				<p>The goal of this project is not to build something useful, it is rather to let my 15 year old son acquire some knowledge in the following fields:</p>
+				<ul>
+					<li>Basic analog and digital electronic design</li>
+					<li>Arduino programming</li>
+					<li>3D design and printing</li>
+					<li>Planning a project and being involved in the different steps from the beginning to the end</li>
+				</ul>
+				<h1>Sub-projects</h1>
+				<p>This project is divided in the following sub-projects:</p>
+				<ul>
+					<SUBPROJECT text="High level project design" href="design.html"/>
+					<SUBPROJECT text="Getting rotation information from the engine" href="rotation-information.html"/>
+					<SUBPROJECT text="Power supply" href="power-supply.html"/>
+					<SUBPROJECT text="Counting and displaying RPM" href="rpm-counting.html"/>
+					<SUBPROJECT text="Storing engine information in the cloud" href="wifi.html"/>
+					<SUBPROJECT text="Design and printing of a case" href="case-design.html"/>
+				</ul>
+				<p>Each sub-project will have a page where the progress will be logged in chronological order.</p>
+			</td>
+			<td style="vertical-align: top; border: 0px; margin: 0; padding: 0;">
+				<div class="side-panel">
+				<h1>Activity Log</h1>
+				<LOG-ITEM date="05/30/2015" text="First Prototype" href="rpm-counting.html#FirstPrototype"/>
+				<LOG-ITEM date="06/06/2015" text="Initial Design" href="design.html#InitialDesign"/>
+				<LOG-ITEM date="06/20/2015" text="Using a 3.3v Arduino" href="rpm-counting.html#MiniPro33"/>
+				<LOG-ITEM date="06/21/2015" text="Cold Temperature Test" href="temperature-test.html"/>
+				</div>
+			</td>
+		</tr>
+	</table>
+</BLOCK>

@@ -1,0 +1,14 @@
+<OPT QUIET IMGXY NODEPEND>
+
+<FILE TEMPLATE="htp.htt">
+
+<DEF NAME="SUBPROJECT" OPTION="text href">
+  <li class="pseudolink" onclick="location='./$href'"><USE text></li>
+</DEF>
+
+<DEF NAME="LOG-ITEM" OPTION="date text href">
+  <hr style="margin: 0; margin-bottom: 0.5rem;">
+  <div class="pseudolink" onclick="location='./$href'"><p><USE date></p><p class="log-item"><USE text></p></div>
+</DEF>
+
+
