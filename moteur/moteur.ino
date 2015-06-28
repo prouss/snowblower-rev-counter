@@ -1,24 +1,35 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27,16,2);
+static int counts;
 
 void setup()
 {
   Serial.begin(9600);
   lcd.init();
   lcd.backlight();
-  pinMode(3,INPUT);
+  pinMode(8,INPUT);
+  PCICR = (1 << PCIE0);
+  PCMSK0 = (1 << PINB0);
+}
+
+ISR(PCINT0_vect)
+{
+  static uint8_t previousState = 0;
+  uint8_t state = (PINB >> PINB0) & 0x01;
+  if (state != previousState)
+  {
+    counts += 1;
+    previousState = state;
+  }
 }
 
 int RPM()
 {
-  unsigned long gap = pulseIn(3,LOW) + pulseIn(3,HIGH);
-  int rpm = 0;
-  if (gap != 0)
-  {
-    rpm = 60000000/gap;
-  }
-  return rpm;
+  int nb = counts;
+  delay (250);
+  int nb2 = counts;
+  return (nb2 - nb)*2;
 }
 
 void loop()
@@ -27,5 +38,7 @@ void loop()
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print(rpm);
-  delay(500);
+  lcd.setCursor(0,1);
+  lcd.print(counts);
+
 }
