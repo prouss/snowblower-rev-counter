@@ -30,8 +30,11 @@
 				<h1>Activity Log</h1>
 				<LOG-ITEM date="05/30/2015" text="First Prototype" href="rpm-counting.html#FirstPrototype"/>
 				<LOG-ITEM date="06/06/2015" text="Initial Design" href="design.html#InitialDesign"/>
+				<LOG-ITEM date="06/14/2015" text="Initial power supply design" href="power-supply.html#InitialPowerSupply"/>
+				<LOG-ITEM date="06/14/2015" text="Wire on spark plug cable" href="rotation-information.html#Wire"/>
 				<LOG-ITEM date="06/20/2015" text="Using a 3.3v Arduino" href="rpm-counting.html#MiniPro33"/>
 				<LOG-ITEM date="06/21/2015" text="Cold Temperature Test" href="temperature-test.html"/>
+				<LOG-ITEM date="06/28/2015" text="Count pulses and compute RPM with interrupt" href="rpm-counting.html#CountPulsesWithInterrupt"/>
 				</div>
 			</td>
 		</tr>

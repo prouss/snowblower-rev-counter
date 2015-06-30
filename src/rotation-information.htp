@@ -1,4 +1,9 @@
 <BLOCK body>
 	<h1>Getting Rotation Information From the Engine</h1>
-	<p>This sub-project is not started yet.</p>
+	<p>This page contains the information on all activities related to getting the rotation information from the engine.</p>
+	
+	<!---- 06/14/2015: Wire on spark plug cable --->
+   	<hr>
+	<file include="rotation-information-1.hti">
+	
 </BLOCK>

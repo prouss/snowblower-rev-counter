@@ -68,7 +68,7 @@ void loop()
 <p>The figure 4 shows two Arduinos running the two sketches. The Arduino connected to a PC with a USB cable is the pulse generator.
 The Arduino connected to the display is the one that measure the elapsed time between two pulses and convert that to RPM.<p>
 <figure> 
-	<img src="images/2015-06-06 10.49.03.jpg" alt="Prototype Working in Freezer">
+	<SMALL_IMAGE src="2015-06-06 10.49.03.jpg" alt="Prototype Working in Freezer">
 	<figcaption>Fugure 4 - Two Arduinos : the pulse generator and the RPM counter</figcaption>
 </figure>
 <p>Using the PC, Étienne ran the generator at different frequencies (by modifying the rpm variable in the sketch) and he notices that the displayed RPM was not exactly matching the frequency of the generator.

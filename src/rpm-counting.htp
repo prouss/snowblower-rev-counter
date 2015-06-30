@@ -4,9 +4,13 @@
 	
 	<!---- 05/30/2015: First Prototype --->
    	<hr>
-	<file include="prototype-1.hti">	
+	<file include="rpm-counting-1.hti">	
 	
 	<!---- 06/20/2015: Using a 3.3v Arduino --->
 	<hr>
-    <file include="prototype-2.hti">	
+    <file include="rpm-counting-2.hti">	
+	
+	<!---- 06/27/2015: Count pulses and compute RPM with interrupt --->
+	<hr>
+    <file include="rpm-counting-3.hti">	
 </BLOCK>

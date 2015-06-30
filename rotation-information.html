@@ -23,7 +23,24 @@
     </section>
     <section class="main-content">
               	<h1>Getting Rotation Information From the Engine</h1>
-	<p>This sub-project is not started yet.</p>
+	<p>This page contains the information on all activities related to getting the rotation information from the engine.</p>
+	
+	<!---- 06/14/2015: Wire on spark plug cable --->
+   	<hr>
+	<a name="Wire"><h2>06/14/2015: Wire on spark plug cable</h2></a>
+<p>Our original idea was to used a wire rolled over the spark cable to pick up the engine's ignition. In the tests we did with a multi-meter few weeks ago we measured a small current of about 100µA.
+This week, when we hooked our wire (terminated with a small resistance) to the oscilloscope, it was difficult to see a nice signal because there was too much noise.
+A circuit to condition the signal is required before we could use it.
+After our test, we found some interesting web pages where this approach is used.
+This page is <a href="http://www.sportdevices.com/rpm_readings/index.htm">http://www.sportdevices.com/rpm_readings/index.htm</a> shows few circuits for sensing RPM from an engine.
+</p>
+<figure>
+	<img src="images/pickup-wire.jpg" alt="Wire rolled overthe spark plug cable">
+	<figcaption>Figure 1 - Wire rolled over the spark plug cable</figcaption>
+</figure>
+<p>Because our engine has an alternator, we decided to get the rotation information from the AC coming out of the alternator.
+It should be a little bit easier to convert the AC power from the alternator to a pulses that could be used by the Arduino.</p>
+	
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/prouss/snowblower-rev-counter">Snowblower-rev-counter</a> is maintained by <a href="https://github.com/prouss">Pierre Rousseau</a> and <a href="https://github.com/pouti">Étienne Lapointe-Rousseau</a>.</span>
       </footer>

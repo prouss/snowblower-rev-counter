@@ -97,7 +97,7 @@ void loop()
 <p>The figure 4 shows two Arduinos running the two sketches. The Arduino connected to a PC with a USB cable is the pulse generator.
 The Arduino connected to the display is the one that measure the elapsed time between two pulses and convert that to RPM.<p>
 <figure>
-	<img src="images/2015-06-06 10.49.03.jpg" alt="Prototype Working in Freezer">
+		<a href="images/2015-06-06 10.49.03.jpg"><img src="images/small-2015-06-06 10.49.03.jpg" alt="Prototype Working in Freezer"></a>
 	<figcaption>Fugure 4 - Two Arduinos : the pulse generator and the RPM counter</figcaption>
 </figure>
 <p>Using the PC, Étienne ran the generator at different frequencies (by modifying the rpm variable in the sketch) and he notices that the displayed RPM was not exactly matching the frequency of the generator.
@@ -109,12 +109,17 @@ This is due to the timing of some instructions that is not accounted for. We wil
     <a name="MiniPro33"><h2>06/20/2015: Using a 3.3v Arduino</h2></a>
 We used a 3.3v Arduino mini pro instead of the original 5v Arduino, and we added a 5v to 3.3v level converter between the Arduino and the LCD. We are running the same code as in the original prototype. Nothing else was changed.<p>
 <figure>
-	<img src="images/2015-06-20 10.51.10.jpg" alt="Initial Design">
+		<a href="images/2015-06-20 10.51.10.jpg"><img src="images/small-2015-06-20 10.51.10.jpg" alt="Initial Design"></a>
 	<figcaption>Figure 1 - RPM counting using a 3.3v Arduino</figcaption>
 </figure>
 <p>The top Arduino Uno (in blue) is running the pulse generator sketch. The 3.3v Arduinio mini pro (with the red led on the bread board) is running the RPM counting sketch.
 The cable attached to the LCD is leading to the level converter in the middle of the screen.</p>
 	
+	
+	<!---- 06/27/2015: Count pulses and compute RPM with interrupt --->
+	<hr>
+    <a name="CountPulsesWithInterrupt"><h2>06/27/2015: Count pulses and compute RPM with interrupt</h2></a>
+<p>Under preparation</p>	
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/prouss/snowblower-rev-counter">Snowblower-rev-counter</a> is maintained by <a href="https://github.com/prouss">Pierre Rousseau</a> and <a href="https://github.com/pouti">Étienne Lapointe-Rousseau</a>.</span>
       </footer>

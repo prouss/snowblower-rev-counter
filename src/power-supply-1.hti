@@ -1,0 +1,40 @@
+<a name="InitialPowerSupply"><h2>06/14/2015: Initial power supply design</h2></a>
+<p>Before we start designing a power supply for our device, lets look at how the engine is
+producing electrical power. The photo 1 below shows the engine's alternator (Tecumseh part number 611111).
+According to the manufacturer, this is an 18 watts alternator. The photo 2 shows the flywheel with its
+3 permanent magnets. The rotation of the permanent magnets inside the flywheel produce a variation
+of the magnetic field inside the alternator's coils. The change of magnetic field induce a current in the coils
+producing electrical power.
+Because we did not find more detailed specifications for this alternator, we will have to perform some measurements
+before we could finalize the design of our power supply.</p>
+<figure
+	<!---- Tecumseh 611111 --->
+	<SMALL_IMAGE src="2015-06-14 11.41.25.jpg" alt="Alternator Coil">
+	<figcaption>Photo 1 - Alternator Coil</figcaption>
+</figure>
+<figure>
+	<!---- Tecumseh 611093 --->
+	<SMALL_IMAGE src="2015-06-14 11.42.17.jpg" alt="Flywheel with permanent magnets">
+	<figcaption>Photo 2 - Flywheel with its 3 permanent magnets</figcaption>
+</figure>
+<p>For our initial power supply prototype, our idea was to first convert the AC power from the alternator to DC,
+and then use a buck converter to convert it to 5 volts. We decided to use a buck converter instead of a linear regulator here 
+because it is an more efficient. Using a linear regulator would have waste to much energy.<p>
+<p>The figure 1 below shows the rectifier that converts AC from the alternator to DC.</p>
+<figure>
+	<SMALL_IMAGE src="power-supply1.png" alt="Rectifier">
+	<figcaption>Figure 1 - Rectifier</figcaption>
+</figure>
+<p>The photo 3 below shows our initial power supply components:</p>
+<ul>
+	<li>A rectifier (on the right side)</li>
+	<li>The buck converter (on the top)</li>
+	<li>Two resistors used to simulate loads</li>
+</ul>
+<p>The resistors used to simulate loads were picked to simulate a light load which include the power draw by the LCD and the Arduino, 
+and to simulate a heavier load which also include the power draw by the ESP8266 while it is transmitting data.</p> 
+<figure>
+	<SMALL_IMAGE src="2015-06-20 17.39.40.jpg" alt="Power supply with test load">
+	<figcaption>Photo 3 - Power supply with test load</figcaption>
+</figure>
+<p>Our initial measurements for this initial power supply were flawed. We will post updated measurements later on.</p>
