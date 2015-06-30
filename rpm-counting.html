@@ -97,7 +97,7 @@ void loop()
 <p>The figure 4 shows two Arduinos running the two sketches. The Arduino connected to a PC with a USB cable is the pulse generator.
 The Arduino connected to the display is the one that measure the elapsed time between two pulses and convert that to RPM.<p>
 <figure>
-		<a href="images/2015-06-06 10.49.03.jpg"><img src="images/small-2015-06-06 10.49.03.jpg" alt="Prototype Working in Freezer"></a>
+		<a href="images/2015-06-06 10.49.03.jpg"><img src="images/2015-06-06 10.49.03.jpg" alt="Prototype Working in Freezer"></a>
 	<figcaption>Fugure 4 - Two Arduinos : the pulse generator and the RPM counter</figcaption>
 </figure>
 <p>Using the PC, Étienne ran the generator at different frequencies (by modifying the rpm variable in the sketch) and he notices that the displayed RPM was not exactly matching the frequency of the generator.
@@ -109,7 +109,7 @@ This is due to the timing of some instructions that is not accounted for. We wil
     <a name="MiniPro33"><h2>06/20/2015: Using a 3.3v Arduino</h2></a>
 We used a 3.3v Arduino mini pro instead of the original 5v Arduino, and we added a 5v to 3.3v level converter between the Arduino and the LCD. We are running the same code as in the original prototype. Nothing else was changed.<p>
 <figure>
-		<a href="images/2015-06-20 10.51.10.jpg"><img src="images/small-2015-06-20 10.51.10.jpg" alt="Initial Design"></a>
+		<a href="images/2015-06-20 10.51.10.jpg"><img src="images/2015-06-20 10.51.10.jpg" alt="Initial Design"></a>
 	<figcaption>Figure 5 - RPM counting using a 3.3v Arduino</figcaption>
 </figure>
 <p>The top Arduino Uno (in blue) is running the pulse generator sketch. The 3.3v Arduinio mini pro (with the red led on the bread board) is running the RPM counting sketch.
@@ -130,7 +130,7 @@ Here is a brief description of the code is working:</p>
 <li>The function <i>ISR(PCINT0_vect)</i> holds the time in microseconds of the last 16 pulses (changes from 0 to 1).
 To determine the RPM, instead of using the elapsed time for the last pulse, we used the elapsed time for the last 16 pulses.
 This is used to smooth out the RPM value.</li>
-<li>The current RPM value is saved in a global variable named <i>rpm</i>.<li>
+<li>The current RPM value is saved in a global variable named <i>rpm</i>.</li>
 <li>The function <i>getRPM</i> is used to get the RPM value from the global variable. Because the value is stored in an non-atomic type for the Arduino
 (many CPU instructions are needed to modify or read it), the <i>getRPM</i> function has to disable the interrupts (cli) before reading it.
 Without the cli statement, we could read the first part of the value, then the ISR could change the value, and after that we could read the last part of the value.
