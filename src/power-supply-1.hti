@@ -22,7 +22,7 @@ and then use a buck converter to convert it to 5 volts. We decided to use a buck
 because it is an more efficient. Using a linear regulator would have waste to much energy.<p>
 <p>The figure 1 below shows the rectifier that converts AC from the alternator to DC.</p>
 <figure>
-	<SMALL_IMAGE src="power-supply1.png" alt="Rectifier">
+	<img src="image/power-supply1.png" alt="Rectifier">
 	<figcaption>Figure 1 - Rectifier</figcaption>
 </figure>
 <p>The photo 3 below shows our initial power supply components:</p>

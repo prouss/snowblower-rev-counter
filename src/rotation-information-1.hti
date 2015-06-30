@@ -7,7 +7,7 @@ This page is <a href="http://www.sportdevices.com/rpm_readings/index.htm">http:/
 </p>
 <figure>
 	<img src="images/pickup-wire.jpg" alt="Wire rolled overthe spark plug cable">
-	<figcaption>Figure 1 - Wire rolled over the spark plug cable</figcaption>
+	<figcaption>Photo 1 - Wire rolled over the spark plug cable</figcaption>
 </figure>
 <p>Because our engine has an alternator, we decided to get the rotation information from the AC coming out of the alternator.
 It should be a little bit simpler to convert the AC from the alternator to a pulses that could be used by the Arduino.</p>
