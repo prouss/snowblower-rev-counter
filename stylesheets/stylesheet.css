@@ -255,6 +255,10 @@ a {
   margin-bottom: 0.5rem;
   padding: 0; }
   
+ .main-content figure {
+  text-align: center;
+ }
+  
 .pseudolink { 
    cursor:pointer; }
 

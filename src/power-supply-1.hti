@@ -22,7 +22,7 @@ and then use a buck converter to convert it to 5 volts. We decided to use a buck
 because it is an more efficient. Using a linear regulator would have waste to much energy.<p>
 <p>The figure 1 below shows the rectifier that converts AC from the alternator to DC.</p>
 <figure>
-	<img src="image/power-supply1.png" alt="Rectifier">
+	<img src="images/power-supply1.png" alt="Rectifier">
 	<figcaption>Figure 1 - Rectifier</figcaption>
 </figure>
 <p>The photo 3 below shows our initial power supply components:</p>
@@ -37,4 +37,39 @@ and to simulate a heavier load which also include the power draw by the ESP8266 
 	<SMALL_IMAGE src="2015-06-20 17.39.40.jpg" alt="Power supply with test load">
 	<figcaption>Photo 3 - Power supply with test load</figcaption>
 </figure>
-<p>Our initial measurements for this initial power supply were flawed. We will post updated measurements later on.</p>
+<p>In the figures 2 and 3 below, we could see the alternator output at low and high engine speed. These measures were taken with the power supply attached to the alternator and with a load of 33&#x2126; at 5v.
+We also measure the alternator output with the 17&#x2126; load. The difference with the two resistors is not important enough (~1/3 watt) for the 18 watts alternator to notice a voltage drop on the alternator.</p>
+<figure>
+	<IMAGE src="low-engine-speed_33ohm-load_1.jpg" alt="Alternator output at low engine speed with a 33&#x2126; load at 5v ">
+	<figcaption>Figure 2 - Alternator output at low engine speed with a 33&#x2126; load at 5v</figcaption>
+</figure>
+<figure>
+	<IMAGE src="high-engine-speed_33ohm-load_1.jpg" alt="Alternator output at high engine speed with a 33&#x2126; load at 5v">
+	<figcaption>Figure 3 - Alternator output at higher engine speed with a 33&#x2126; load at 5v</figcaption>
+</figure>
+<p>In the figure 4, we could see the measured voltage atthe output of the alternator, and at the output of the rectifier bridge.<p>
+<figure>
+	<table align="center" style="display: table; width: initial;">
+		<tr>
+			<th>Engine speed</th>
+			<th>Peak voltage<br>(alternator output)</th>
+			<th>DC voltage<br>(rectifier output)</th>
+		</tr>
+		<tr>
+			<td>Low</td>
+			<td>25 v</td>
+			<td>17.6 v</td>
+		</tr>
+		<tr>
+			<td>High</td>
+			<td>50 v</td>
+			<td>48 v</td>
+		</tr>
+	</table>
+	<figcaption>Figure 4 - Alternator output voltage with a 33&#x2126; load at 5v</figcaption>
+</figure>
+<p>We have two problems with this initial power supply:<p>
+<ul>
+	<li>The voltage is too high for the electrolytic capacitor used in our rectifier. The capacitor is a 330&#181F 25v. We will have to change it to a 330&#181F 63v.</li>
+	<li>The buck converter accept an input voltage in the range 4.75-23v. Our input voltage is too high for the converter. We will have to find a replacement for this component.</li>
+</ul>

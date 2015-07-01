@@ -1,7 +1,7 @@
 <a name="MiniPro33"><h2>06/20/2015: Using a 3.3v Arduino</h2></a>
 We used a 3.3v Arduino mini pro instead of the original 5v Arduino, and we added a 5v to 3.3v level converter between the Arduino and the LCD. We are running the same code as in the original prototype. Nothing else was changed.<p>
 <figure>
-	<SMALL_IMAGE src="2015-06-20 10.51.10.jpg" alt="Initial Design">
+	<SMALL_IMAGE src="2015-06-20 10.51.10.jpg" alt="RPM counting using a 3.3v Arduino">
 	<figcaption>Figure 5 - RPM counting using a 3.3v Arduino</figcaption>
 </figure>
 <p>The top Arduino Uno (in blue) is running the pulse generator sketch. The 3.3v Arduinio mini pro (with the red led on the bread board) is running the RPM counting sketch.

@@ -11,6 +11,10 @@
   <div class="pseudolink" onclick="location='./$href'"><p><USE date></p><p class="log-item"><USE text></p></div>
 </DEF>
 
+<DEF NAME="IMAGE" OPTION="src alt">
+	<a href="images/$src"><img src="images/$src" alt="$alt"></a>
+</DEF>
+
 <DEF NAME="SMALL_IMAGE" OPTION="src alt">
 	<a href="images/$src"><img src="images/small-$src" alt="$alt"></a>
 </DEF>
