@@ -12,5 +12,5 @@
 </DEF>
 
 <DEF NAME="SMALL_IMAGE" OPTION="src alt">
-	<a href="images/$src"><img src="images/$src" alt="$alt"></a>
+	<a href="images/$src"><img src="images/small-$src" alt="$alt"></a>
 </DEF>
