@@ -242,6 +242,81 @@ void loop()
 	<figcaption>Figure 6 - Complete code for measuring the engine's RPM using an ISR</figcaption>
 </figure>
 	
+	
+	<!---- 07/11/2015: Pulse generator using a timer --->
+	<hr>
+    <a name="PulseGeneratorUsingTimer"><h2>07/11/2015: Pulse generator using a timer</h2></a>
+<p>This week, we modified the code of the pulse generator hoping to gain some accuracy. The pulse generator is used to simulate engine pulses for testing the RPM counter module.
+In this version of the code, we use used a timer and an ISR (interrupt service routine) that is called every time the timer's counter reaches its maximum value.
+Here is a brief description of how the code is working:</p>
+<ul>
+<li>The <i>setupTimer</i> function initialises the timer to generate an interrupt every <i>timeInUS</i> micro seconds. The function also attaches the function <i>timerISR</i> to the timer's interrupt.</li>
+<li>The <i>setRPM</i> function transforms the given RPM value into a period time in microseconds, and calls <i>setupTimer</i>.</li>
+<li>The <i>timerISR</i> function generates a pulse. It set the pin 3 to high for one millisecond.</li>
+<li>The <i>loop</i> function reads an RPM value from the serial port and changes the timer to generate pulses for the given RPM value.</li>
+</ul>
+<p>The complete code could be found in the figure 7 below.<p>
+<figure>
+	<div class="code">
+<pre>#include "TimerOne.h"
+
+int defaultRPM = 2000;
+
+void setupTimer(unsigned long timeInUs)
+{
+  Timer1.initialize(timeInUs);       // Initialize timer1, and set a timeInUs micro second period.
+  Timer1.attachInterrupt(timerISR);  // Attaches timerISR() as a timer overflow interrupt.
+}
+
+void setRPM(int RPM)
+{
+  unsigned long timeInUs = 60000000 / RPM;
+  setupTimer(timeInUs);
+  Serial.println(timeInUs);
+}
+
+void timerISR()
+{
+  sei();
+  digitalWrite(3, HIGH);
+  delay(1); // Stay high for 1 ms.
+  digitalWrite(3, LOW);
+}
+
+void setup()
+{
+  pinMode(3, OUTPUT);
+  Serial.begin(9600);
+  setRPM(defaultRPM);
+}
+
+void loop()
+{
+  // Read a new RPM value.
+  String line = Serial.readStringUntil('\n');
+  int RPM = line.toInt();
+  
+  if (line != "") {
+   if (RPM == 0) {
+    Serial.println("error");
+   } else {
+    Serial.print("setting RPM to ");
+    Serial.println(RPM);
+    
+    // Set timer to generate pulses corresponding to the given RPM.
+    setRPM(RPM);
+   }
+  }
+}</pre>
+	</div>
+	<figcaption>Figure 7 - Complete code for generating pulses using a timer and an ISR</figcaption>
+</figure>
+<p>When we first checked the output pulse on an oscilloscope we found that the pulse duration in millisecond was not exactly what was expected.</p>
+<p>After adding some debugging code for checking the time in microseconds needed to generate 1000 pulses, we found a match between the expected
+time in microseconds measured by the Arduino and the expected duration of the pulses. This was suggesting that the code is ok and the problem lies somewhere else.</p>
+<p>After some reading on the web, we found that the cheaper versions of the Arduino are using ceramic resonators instead of crystals for generating the clock. This leads to small timing errors.</p>
+<p>Here is one of the nice references we found on that subject: <a href="http://jorisvr.nl/arduino_frequency.html">Arduino clock frequency stability</a>.</p>
+	
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/prouss/snowblower-rev-counter">Snowblower-rev-counter</a> is maintained by <a href="https://github.com/prouss">Pierre Rousseau</a> and <a href="https://github.com/pouti">Étienne Lapointe-Rousseau</a>.</span>
       </footer>

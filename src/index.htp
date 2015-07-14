@@ -35,6 +35,7 @@
 				<LOG-ITEM date="06/20/2015" text="Using a 3.3v Arduino" href="rpm-counting.html#MiniPro33"/>
 				<LOG-ITEM date="06/21/2015" text="Cold Temperature Test" href="temperature-test.html"/>
 				<LOG-ITEM date="06/28/2015" text="Count pulses and compute RPM with interrupt" href="rpm-counting.html#CountPulsesWithInterrupt"/>
+				<LOG-ITEM date="07/11/2015" text="Pulse generator using a timer" href="rpm-counting.html#PulseGeneratorUsingTimer"/>
 				</div>
 			</td>
 		</tr>

@@ -13,4 +13,8 @@
 	<!---- 06/27/2015: Count pulses and compute RPM with interrupt --->
 	<hr>
     <file include="rpm-counting-3.hti">	
+	
+	<!---- 07/11/2015: Pulse generator using a timer --->
+	<hr>
+    <file include="rpm-counting-4.hti">	
 </BLOCK>
