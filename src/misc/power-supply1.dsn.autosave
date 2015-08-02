@@ -320,7 +320,7 @@ download the executable.-->
 				</POLYGON>
 			</TinyCAD>
 		</SYMBOLDEF>
-		<SYMBOLDEF id='5'>
+		<SYMBOLDEF id='3'>
 			<NAME type='0'>POST_PM</NAME>
 			<REF type='1'>K?</REF>
 			<DESCRIPTION>Panel mount banana plug post </DESCRIPTION>
@@ -447,7 +447,7 @@ download the executable.-->
 		<WIRE a='64.00000,34.00000' b='94.00000,34.00000'/>
 		<WIRE a='94.00000,34.00000' b='94.00000,40.00000'/>
 		<WIRE a='94.00000,34.00000' b='116.03333,34.01111'/>
-		<SYMBOL id='5' pos='124.03333,36.01111' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='3' pos='124.03333,36.01111' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='K?' show='0' pos='-8.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='+' show='1' pos='-8.00000,-4.00000'/>
 			<FIELD type='1' description='Package' value='' show='0' pos='-8.00000,4.40000'/>
@@ -460,7 +460,7 @@ download the executable.-->
 			<FIELD type='1' description='Mouser Part' value='..' show='0' pos='-8.00000,21.20000'/>
 			<FIELD type='1' description='Cost' value='1' show='0' pos='-8.00000,23.60000'/>
 		</SYMBOL>
-		<SYMBOL id='5' pos='124.61527,58.24147' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='3' pos='124.61527,58.24147' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='K?' show='0' pos='-8.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='-' show='1' pos='-8.00000,-4.00000'/>
 			<FIELD type='1' description='Package' value='' show='0' pos='-8.00000,4.40000'/>
@@ -473,7 +473,7 @@ download the executable.-->
 			<FIELD type='1' description='Mouser Part' value='..' show='0' pos='-8.00000,21.20000'/>
 			<FIELD type='1' description='Cost' value='1' show='0' pos='-8.00000,23.60000'/>
 		</SYMBOL>
-		<SYMBOL id='5' pos='45.79282,47.08842' part='0' rotate='6' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='3' pos='45.79282,47.08842' part='0' rotate='6' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='K?' show='0' pos='-8.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='AC' show='1' pos='-8.00000,-4.00000'/>
 			<FIELD type='1' description='Package' value='' show='0' pos='-8.00000,4.40000'/>
@@ -486,7 +486,7 @@ download the executable.-->
 			<FIELD type='1' description='Mouser Part' value='..' show='0' pos='-8.00000,21.20000'/>
 			<FIELD type='1' description='Cost' value='1' show='0' pos='-8.00000,23.60000'/>
 		</SYMBOL>
-		<SYMBOL id='5' pos='46.00000,62.00000' part='0' rotate='6' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='3' pos='46.00000,62.00000' part='0' rotate='6' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='K?' show='0' pos='-8.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='AC' show='1' pos='-8.00000,-4.00000'/>
 			<FIELD type='1' description='Package' value='' show='0' pos='-8.00000,4.40000'/>
