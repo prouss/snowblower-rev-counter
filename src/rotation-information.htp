@@ -1,9 +1,13 @@
 <BLOCK body>
-	<h1>Getting Rotation Information From the Engine</h1>
+	<h1>Getting Rotation Information from the Engine</h1>
 	<p>This page contains the information on all activities related to getting the rotation information from the engine.</p>
 	
 	<!---- 06/14/2015: Wire on spark plug cable --->
    	<hr>
 	<file include="rotation-information-1.hti">
+	
+	<!---- 10/24/2015: Converting rotation information to pulses --->
+   	<hr>
+	<file include="rotation-information-2.hti">
 	
 </BLOCK>

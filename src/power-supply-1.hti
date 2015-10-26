@@ -1,5 +1,5 @@
 <a name="InitialPowerSupply"><h2>06/14/2015: Initial power supply design</h2></a>
-<p>Before we start designing a power supply for our device, lets look at how the engine is
+<p>Before we start designing a power supply for our device, let's look at how the engine is
 producing electrical power. The photo 1 below shows the engine's alternator (Tecumseh part number 611111).
 According to the manufacturer, this is an 18 watts alternator. The photo 2 shows the flywheel with its
 3 permanent magnets. The rotation of the permanent magnets inside the flywheel produce a variation
@@ -19,7 +19,7 @@ before we could finalize the design of our power supply.</p>
 </figure>
 <p>For our initial power supply prototype, our idea was to first convert the AC power from the alternator to DC,
 and then use a buck converter to convert it to 5 volts. We decided to use a buck converter instead of a linear regulator here 
-because it is an more efficient. Using a linear regulator would have waste to much energy.<p>
+because it is more efficient. Using a linear regulator would have waste to much energy.<p>
 <p>The figure 1 below shows the rectifier that converts AC from the alternator to DC.</p>
 <figure>
 	<img src="images/power-supply1.png" alt="Rectifier">
@@ -47,7 +47,7 @@ We also measure the alternator output with the 17&#x2126; load. The difference w
 	<IMAGE src="high-engine-speed_33ohm-load_1.jpg" alt="Alternator output at high engine speed with a 33&#x2126; load at 5v">
 	<figcaption>Figure 3 - Alternator output at higher engine speed with a 33&#x2126; load at 5v</figcaption>
 </figure>
-<p>In the figure 4, we could see the measured voltage atthe output of the alternator, and at the output of the rectifier bridge.<p>
+<p>In the figure 4, we could see the measured voltage at the output of the alternator, and at the output of the rectifier bridge.<p>
 <figure>
 	<table align="center" style="display: table; width: initial; text-align: center;">
 		<tr>

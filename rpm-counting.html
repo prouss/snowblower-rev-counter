@@ -34,7 +34,7 @@ By measuring the time between two pulses (the <i>t</i> in figure 1 below) we cou
 	<img src="images/measuring-time-between pulses.png" alt="Measuring elapsed time between two pulses">
 	<figcaption>Figure 1 - Measuring elapsed time between two pulses</figcaption>
 </figure>
-<p>Inspired by a robotic lab at high school where he had to measure the length of a pulse in order to evaluated the distance measured by a HC-SR04 sonar, Étienne wrote an Arduino
+<p>Inspired by a robotic lab at high school where he had to measure the length of a pulse in order to evaluate the distance measured by a HC-SR04 sonar, Étienne wrote an Arduino
 sketch for measuring the time between two pulses, convert it to RPM, and display it on a LCD. The code for this sketch is shown in figure 2.
 <figure>
 	<div class="code">
@@ -98,7 +98,7 @@ void loop()
 The Arduino connected to the display is the one that measure the elapsed time between two pulses and convert that to RPM.<p>
 <figure>
 		<a href="images/2015-06-06 10.49.03.jpg"><img src="images/small 2015-06-06 10.49.03.jpg" alt="Initial prototype"></a>
-	<figcaption>Fugure 4 - Two Arduinos : the pulse generator and the RPM counter</figcaption>
+	<figcaption>Figure 4 - Two Arduinos: the pulse generator and the RPM counter</figcaption>
 </figure>
 <p>Using the PC, Étienne ran the generator at different frequencies (by modifying the rpm variable in the sketch) and he notices that the displayed RPM was not exactly matching the frequency of the generator.
 This is due to the timing of some instructions that is not accounted for. We will fix that at a later time.<p>
@@ -112,14 +112,14 @@ We used a 3.3v Arduino mini pro instead of the original 5v Arduino, and we added
 		<a href="images/2015-06-20 10.51.10.jpg"><img src="images/small 2015-06-20 10.51.10.jpg" alt="RPM counting using a 3.3v Arduino"></a>
 	<figcaption>Figure 5 - RPM counting using a 3.3v Arduino</figcaption>
 </figure>
-<p>The top Arduino Uno (in blue) is running the pulse generator sketch. The 3.3v Arduinio mini pro (with the red led on the bread board) is running the RPM counting sketch.
+<p>The top Arduino Uno (in blue) is running the pulse generator sketch. The 3.3v Arduino mini pro (with the red led on the bread board) is running the RPM counting sketch.
 The cable attached to the LCD is leading to the level converter in the middle of the screen.</p>
 	
 	
 	<!---- 06/27/2015: Count pulses and compute RPM with interrupt --->
 	<hr>
     <a name="CountPulsesWithInterrupt"><h2>06/27/2015: Count pulses and compute RPM with interrupt</h2></a>
-<p>This week, we modified the code to used an ISR (interrupt service routine) to count the RPM.
+<p>This week, we modified the code to use an ISR (interrupt service routine) to count the RPM.
 In this version of the code, we use the pin 8 to receive pulses from the engine.
 Here is a brief description of the code is working:</p>
 <ul>
@@ -250,7 +250,7 @@ void loop()
 In this version of the code, we use used a timer and an ISR (interrupt service routine) that is called every time the timer's counter reaches its maximum value.
 Here is a brief description of how the code is working:</p>
 <ul>
-<li>The <i>setupTimer</i> function initialises the timer to generate an interrupt every <i>timeInUS</i> micro seconds. The function also attaches the function <i>timerISR</i> to the timer's interrupt.</li>
+<li>The <i>setupTimer</i> function initializes the timer to generate an interrupt every <i>timeInUS</i> micro seconds. The function also attaches the function <i>timerISR</i> to the timer's interrupt.</li>
 <li>The <i>setRPM</i> function transforms the given RPM value into a period time in microseconds, and calls <i>setupTimer</i>.</li>
 <li>The <i>timerISR</i> function generates a pulse. It set the pin 3 to high for one millisecond.</li>
 <li>The <i>loop</i> function reads an RPM value from the serial port and changes the timer to generate pulses for the given RPM value.</li>

@@ -3,7 +3,7 @@
 In this version of the code, we use used a timer and an ISR (interrupt service routine) that is called every time the timer's counter reaches its maximum value.
 Here is a brief description of how the code is working:</p>
 <ul>
-<li>The <i>setupTimer</i> function initialises the timer to generate an interrupt every <i>timeInUS</i> micro seconds. The function also attaches the function <i>timerISR</i> to the timer's interrupt.</li>
+<li>The <i>setupTimer</i> function initializes the timer to generate an interrupt every <i>timeInUS</i> micro seconds. The function also attaches the function <i>timerISR</i> to the timer's interrupt.</li>
 <li>The <i>setRPM</i> function transforms the given RPM value into a period time in microseconds, and calls <i>setupTimer</i>.</li>
 <li>The <i>timerISR</i> function generates a pulse. It set the pin 3 to high for one millisecond.</li>
 <li>The <i>loop</i> function reads an RPM value from the serial port and changes the timer to generate pulses for the given RPM value.</li>

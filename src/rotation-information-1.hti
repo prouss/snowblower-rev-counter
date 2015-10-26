@@ -1,5 +1,5 @@
 <a name="Wire"><h2>06/14/2015: Wire on spark plug cable</h2></a>
-<p>Our original idea was to used a wire rolled over the spark cable to pick up the engine's ignition. In the tests we did with a multi-meter a few weeks ago we measured a small current of about 100µA.
+<p>Our original idea was to use a wire rolled over the spark cable to pick up the engine's ignition. In the tests we did with a multi-meter a few weeks ago we measured a small current of about 100µA.
 This week, when we hooked our wire (terminated with a small resistance) to the oscilloscope, it was difficult to see a nice signal because there was too much noise.
 A circuit to condition the signal is required before we could use it.
 After our test, we found some interesting web pages where this approach is used.

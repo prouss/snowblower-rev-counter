@@ -1,5 +1,5 @@
 <a name="CountPulsesWithInterrupt"><h2>06/27/2015: Count pulses and compute RPM with interrupt</h2></a>
-<p>This week, we modified the code to used an ISR (interrupt service routine) to count the RPM.
+<p>This week, we modified the code to use an ISR (interrupt service routine) to count the RPM.
 In this version of the code, we use the pin 8 to receive pulses from the engine.
 Here is a brief description of the code is working:</p>
 <ul>

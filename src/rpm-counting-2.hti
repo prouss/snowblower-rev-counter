@@ -4,5 +4,5 @@ We used a 3.3v Arduino mini pro instead of the original 5v Arduino, and we added
 	<SMALL_IMAGE src="2015-06-20 10.51.10.jpg" alt="RPM counting using a 3.3v Arduino">
 	<figcaption>Figure 5 - RPM counting using a 3.3v Arduino</figcaption>
 </figure>
-<p>The top Arduino Uno (in blue) is running the pulse generator sketch. The 3.3v Arduinio mini pro (with the red led on the bread board) is running the RPM counting sketch.
+<p>The top Arduino Uno (in blue) is running the pulse generator sketch. The 3.3v Arduino mini pro (with the red led on the bread board) is running the RPM counting sketch.
 The cable attached to the LCD is leading to the level converter in the middle of the screen.</p>

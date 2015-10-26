@@ -1,0 +1,29 @@
+<a name="SchmittTrigger"><h2>10/24/2015: Converting rotation information to pulses</h2></a>
+<p>To convert the rotation information to digital pulse that could be used by the Arduino, we pass the output of the alternator through a Schmitt Trigger. This kind of circuit is used to convert noisy analogic signal to a digital signal. 
+If you want to know more about Schmitt Trigger, this page explains how they work and when to use them: <a href="http://electronics.stackexchange.com/questions/109270/what-is-a-schmitt-trigger-and-its-application-exactly">What is a Schmitt Trigger and its application exactly?</a>
+</p>
+<p>
+</p>
+<figure>
+	<img src="images/SchmittTrigger.png" alt="Schmitt trigger used to convert rotation information to pulses">
+	<figcaption>Figure 1 - Schmitt trigger used to convert rotation information to pulses</figcaption>
+</figure>
+<p>The circuit was designed to accept input from 6 to 60 volts. Diodes D2 and D3 are used to limit the voltage V3 to an acceptable level (1.4 volts) for the operating amplifier. R1 and R2 divide voltage V2 for low voltage values.
+When V2 reaches 1.4 volts, then the voltage across R1 would roughly be Vin - 2.1 volts. The value of R1 was selected so it will dissipate less than 1/4 watts when Vin is 60 volts.
+The values of R3, R4, and R5 where selected to have a hysteresis loop below the maximum V3 voltage.
+</p>
+<figure>
+	<SMALL_IMAGE src="SchmittTrigge6v30hzSimulation.png" alt="Spice simulation with Vin = 6 volts at 30 Hz">
+	<figcaption>Figure 2 - Spice simulation with Vin = 6 volts at 30 Hz</figcaption>
+</figure>
+<p>
+On the simulation we could see that Vout is going from 3.5v to 0v when Vin is going above 2.7v, after that point Vin must go below 0.7v before Vout raise again to 3.5v.
+This hysteresis loop helps having a nice digital event if the output of the alternator is noisy. You could click on the image to see a larger version.
+</p>
+<p>
+The following photo shows the Schmitt Trigger board for our project.
+</p>
+<figure>
+	<SMALL_IMAGE src="SchmittTriggerBoard.jpg" alt="The Schmitt Trigger board">
+	<figcaption>Photo 2 - The Schmitt Trigger board</figcaption>
+</figure>
